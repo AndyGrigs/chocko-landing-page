@@ -51,9 +51,20 @@ body {
 
 /* #region Base */
 /* Reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 a {
   text-decoration: none;
@@ -66,6 +77,12 @@ button {
 address {
   font-style: normal;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 
 /* Common */
 .visually-hidden {
@@ -82,8 +99,11 @@ address {
 }
 
 .section {
+  padding: 60px 0;
 }
 .section-title {
+  width: 412px;
+  margin: 0 auto 50px;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.17;
@@ -92,21 +112,31 @@ address {
   text-align: center;
 }
 .accent-text {
-  color: var(--cl-accent);
+  color: rgb(var(--cl-accent));
 }
 /* #endregion */
 
 /* #region Buttons */
 .btn {
+  min-width: 144px;
+  min-height: 45px;
+  padding: 14px 40px;
+
   font-size: 14px;
   font-weight: 600;
   color: rgb(var(--cl-white));
   background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 100px;
+
 }
 .btn-accent {
   background-color: var(--cl-accent);
 }
-.btn-primary {
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: rgb(var(--cl-white));
+  color: rgb(var(--cl-accent));
 }
 .btn-secondary {
   font-size: 18px;
@@ -137,24 +167,6 @@ address {
 .socials-icon {
 }
 /* #endregion */
-/* WebStudio logo */
-/* .logo {
-  font-family: var(--secondary-font);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 21px;
-  letter-spacing: 0.54px;
-  text-transform: uppercase;
-  color: var(--IRIS, #4d5ae5);
-}
-.logo-dark {
-  color: black;
-}
-.logo-light {
-  color: white;
-} */
-
 /* #region Header */
 .header {
 }
@@ -205,8 +217,13 @@ address {
   background: rgb(var(--cl-dark));
 }
 .benefits-list {
+  display: flex;
+  gap: 88px;
+  justify-content: center;
+
 }
 .benefits-item {
+  width: 330px;
 }
 .benefits-subtitle {
   font-size: 18px;
