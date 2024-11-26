@@ -116,6 +116,14 @@ img {
 }
 /* #endregion */
 
+
+
+.container{
+  width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
 /* #region Buttons */
 .btn {
   min-width: 144px;
