@@ -21,8 +21,8 @@
 } */
 
 :root {
-  --primary-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Roboto', sans-serif;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
 
   /* Colors */
   --cl-body: 250 250 250;
@@ -34,6 +34,9 @@
   --cl-white: 255 255 255;
   --cl-beige: 252 241 224;
   /* Others */
+  --indent-col: 32px;
+  --indent-row: var(--indent-col);
+  --tems: 3;
   /* Colors */
 }
 
@@ -59,6 +62,7 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
 }
 ul,
 ol {
@@ -82,7 +86,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 /* Common */
 .visually-hidden {
@@ -114,15 +117,28 @@ img {
 .accent-text {
   color: rgb(var(--cl-accent));
 }
-/* #endregion */
 
-
-
-.container{
+.container {
   width: 1168px;
   padding: 0 16px;
   margin: 0 auto;
 }
+/* #endregion */
+
+/* #region Cardset */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--indent-col);
+  row-gap: var(--indent-row);
+}
+
+.card-set-item {
+  flex-basis: calc(
+    (100% - var(--indent-col) * (var(--tems) - 1)) / var(--tems)
+  );
+}
+/* #endregion */
 
 /* #region Buttons */
 .btn {
@@ -136,7 +152,6 @@ img {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 100px;
-
 }
 .btn-accent {
   background-color: var(--cl-accent);
@@ -154,6 +169,10 @@ img {
 
 /* #region Logo */
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 1.11;
@@ -167,6 +186,9 @@ img {
 
 /* #region Socials */
 .socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 .socials-item {
 }
@@ -175,14 +197,26 @@ img {
 .socials-icon {
 }
 /* #endregion */
+
 /* #region Header */
 .header {
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
 .header-logo {
+  margin-right: auto;
 }
 .header-nav {
+  margin-right: 90px;
 }
 .header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 .header-nav-item {
 }
@@ -202,6 +236,8 @@ img {
 
 /* #region Hero */
 .hero {
+}
+.hero .container {
   background: rgb(var(--cl-primary) / 40%);
 }
 .hero-title {
@@ -223,12 +259,12 @@ img {
 /* #region Benefits */
 .benefits {
   background: rgb(var(--cl-dark));
+  padding: 50px 0;
 }
 .benefits-list {
   display: flex;
   gap: 88px;
   justify-content: center;
-
 }
 .benefits-item {
   width: 330px;
@@ -238,6 +274,7 @@ img {
   font-weight: 600;
   line-height: 1.22;
   color: rgb(var(--cl-white));
+  margin-bottom: 18px;
 }
 .benefits-desc {
   font-family: var(--custom-font);
@@ -285,6 +322,9 @@ img {
 .products {
 }
 .products-list {
+  --items: 4;
+  --indent-col: 18px;
+  --indent-row: 24px;
 }
 .products-item {
   background: rgb(var(--cl-light));
@@ -312,6 +352,7 @@ img {
 .bestsellers {
 }
 .bestsellers-list {
+  --indent-col: 16px;
 }
 .bestsellers-item {
   background: rgb(var(--cl-white));
@@ -330,6 +371,7 @@ img {
 .reviews {
 }
 .reviews-list {
+  --indent-col: 24px;
 }
 .reviews-item {
   background: rgb(var(--cl-white));
