@@ -261,8 +261,9 @@ img {
 .hero-container {
   width: 1136px;
   padding: 381px 40px 40px;
-  background-color: rgb(var(--cl-primary) / 40%);
   border-radius: 30px;
+  background-color: rgb(var(--cl-primary) / 40%);
+  background-image: url('../images/hero/hero-bg.jpg');
 }
 
 .hero-wrapper {
