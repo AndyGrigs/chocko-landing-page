@@ -262,8 +262,14 @@ img {
   width: 1136px;
   padding: 381px 40px 40px;
   border-radius: 30px;
-  background-color: rgb(var(--cl-primary) / 40%);
-  background-image: url('../images/hero/hero-bg.jpg');
+  background-image: linear-gradient(
+    rgb(var(--cl-primary) / 40%),
+    rgb(var(--cl-primary) / 40%)
+    ), url('../images/hero/hero-bg.jpg');
+    background-color: rgb(var(--cl-primary) / 40%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-wrapper {
@@ -277,6 +283,8 @@ img {
 }
 
 .hero-title {
+  width: 484px;
+  margin-bottom: 32px;
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
@@ -374,16 +382,49 @@ img {
 /* #region Made */
 .made {
 }
+.made-wrapper{
+  display: flex;
+  gap: 24px;
+}
+.made-left-side{
+  flex-shrink: 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
 .made-pic {
 }
+
+.made-right-side{
+  padding: 32px;
+  background: rgb(var(--cl-white));
+  border-radius: 15px;
+}
+
 .made-subtitle {
+  margin-bottom: 28px;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.33;
 }
 .made-list {
 }
-.made-item {
+.made-item{
+  display: flex;
+  gap: 8px;
+}
+.made-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.made-item::before {
+  content: '';
+  display: inline-block;
+  flex-shrink: 0;
+  margin-top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #4c4c4c;
+  border: 2px solid #eceded;
 }
 /* #endregion */
 
