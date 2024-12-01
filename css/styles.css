@@ -52,6 +52,7 @@ body {
   /* <em | i | address> italic */
 }
 
+
 /* #region Base */
 /* Reset */
 h1,
@@ -211,8 +212,28 @@ img {
 .socials-item {
 }
 .socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgb(var(--cl-icon) / 10%);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials-link:hover,
+.socials-link:focus {
+  border-color: rgb(var(--cl-accent));
 }
 .socials-icon {
+  fill: rgb(var(--cl-icon));
+}
+
+.header-socials{
+  --cl-icon: var(--cl-primary);
+}
+.footer-socials{
+  --cl-icon: var(--cl-white);
 }
 /* #endregion */
 
@@ -246,6 +267,16 @@ img {
   line-height: 1.14;
   letter-spacing: -0.02em;
 }
+
+.header-nav-link.active::after{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(var(--cl-accent));
+  border-radius: 2px;
+}
+
 .header-nav-link:hover,
 .header-nav-link:focus {
   /* color: rgb(var(--cl-accent)); */
@@ -332,6 +363,16 @@ img {
   color: rgb(var(--cl-white));
   margin-bottom: 18px;
 }
+
+.benefits-item:not(:last-child)::after{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 124px;
+  background-color: rgb(255 255 255 / 50%);
+  border-radius: 15px;
+}
+
 .benefits-desc {
   font-family: var(--custom-font);
   font-size: 14px;
@@ -502,6 +543,7 @@ img {
 }
 .reviews-item {
   background: rgb(var(--cl-white));
+  box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-avatar {
 }
@@ -519,15 +561,27 @@ img {
 
 /* #region Footer */
 .footer {
+  padding: 50px 0;
   background: rgb(var(--cl-dark));
 }
+.footer-top {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(var(--cl-white) / 10%);
+}
 .footer-slogan {
+  width: 300px;
+  margin-right: auto;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.21;
+  letter-spacing: -0.02em;
   color: rgb(var(--cl-white));
 }
 .footer-caption {
+  margin-bottom: 14px;
   font-weight: 500;
   color: rgb(var(--cl-white));
 }
@@ -535,7 +589,8 @@ img {
 }
 .footer-contacts {
 }
-.footer-contacts-item {
+.footer-contacts-item:not(:last-child) {
+  margin-bottom: 4px;
 }
 .footer-contacts-link {
   text-align: center;
@@ -545,11 +600,18 @@ img {
 .footer-contacts-link:focus {
   color: rgb(var(--cl-accent));
 }
+.footer-bottom {
+  padding-top: 24px;
+}
 .footer-nav {
+  display: flex;
+  gap: 24px;
 }
 .footer-nav-item {
 }
 .footer-nav-link {
+  display: block;
+  padding: 18px 0;
   font-weight: 500;
   line-height: 1.14;
   color: rgb(var(--cl-white));
