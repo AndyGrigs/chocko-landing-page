@@ -663,10 +663,120 @@
           </ul>
         </div>
       </div>
-      <button id="write-comment" class="btn btn-accent" type="button">Stay your comment</button>
+      <button id="write-comment" class="btn btn-accent" type="button">
+        Stay your comment
+      </button>
     </footer>
 
-   
+    <!-- Modal -->
+    <div id="comment-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close" id="close-modal">&times;</span>
+          <h2>
+            Leave a Review About
+            <span style="color: #fd9222">Our Chocolate</span>
+          </h2>
+        </div>
+        <div class="modal-body">
+          <form id="comment-form">
+            <!-- Name Field -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <div style="position: relative">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                />
+                <span>
+                  <i class="fa fa-user"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <div style="position: relative">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+                <span
+                 
+                >
+                  <i class="fa fa-envelope"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <div style="position: relative">
+                <input
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                />
+                <span
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                    color: #fd9222;
+                  "
+                >
+                  <i class="fa fa-phone"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Comment Textarea -->
+            <div class="form-group">
+              <label for="comment">Comment</label>
+              <textarea
+                id="comment"
+                name="comment"
+                placeholder="Enter text"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Privacy Policy Checkbox -->
+            <div class="form-group">
+              <label>
+                <input
+                  type="checkbox"
+                  id="privacy-policy"
+                  name="privacy-policy"
+                  required
+                />
+                I accept the terms and conditions of the
+                <a href="#" target="_blank" style="color: #fd9222"
+                  >Privacy Policy</a
+                >
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+              <button type="submit" class="btn btn-submit">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
