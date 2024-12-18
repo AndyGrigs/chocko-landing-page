@@ -299,7 +299,7 @@ img {
       rgb(var(--cl-primary) / 40%),
       rgb(var(--cl-primary) / 40%)
     ),
-    url('../images/hero/hero-bg.jpg');
+    url('../../images/hero/hero-bg.jpg');
   background-color: rgb(var(--cl-primary) / 40%);
   background-size: cover;
   background-position: center;
