@@ -505,6 +505,7 @@ img {
   background: rgb(var(--cl-light));
 }
 .products-img {
+  width: 100%;
 }
 .products-caption {
   font-weight: 600;
@@ -523,14 +524,7 @@ img {
   text-align: center;
 }
 .products-btn {
-  font-weight: 600;
-  background: rgb(var(--cl-light));
-  color: rgb(var(--cl-primary));
-  border: 1px solid rgb(var(--cl-primary));
-  border-radius: 4px;
-  cursor: pointer;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .products-btn:hover,
 .products-btn:focus {
