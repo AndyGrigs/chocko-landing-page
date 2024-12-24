@@ -21,8 +21,8 @@
 } */
 
 :root {
-  --primary-font: 'Montserrat', sans-serif;
-  --secondary-font: 'Roboto', sans-serif;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
 
   /* Colors */
   --cl-body: 250 250 250;
@@ -118,8 +118,6 @@ img {
   color: rgb(var(--cl-accent));
 }
 
-
-
 .container {
   width: 1168px;
   padding: 0 16px;
@@ -197,10 +195,6 @@ img {
   line-height: 1.11;
   letter-spacing: -0.03em;
 }
-.logo-accent {
-}
-.logo-icon {
-}
 /* #endregion */
 
 /* #region Socials */
@@ -210,8 +204,7 @@ img {
   justify-content: center;
   gap: 14px;
 }
-.socials-item {
-}
+
 .socials-link {
   display: flex;
   align-items: center;
@@ -264,8 +257,7 @@ img {
   align-items: center;
   gap: 24px;
 }
-.header-nav-item {
-}
+
 .header-nav-link {
   display: block;
   padding: 32px 0;
@@ -276,14 +268,13 @@ img {
 }
 
 .header-nav-link.active::after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   height: 4px;
   background-color: rgb(var(--cl-accent));
   border-radius: 2px;
 }
-
 
 /* #endregion */
 
@@ -299,7 +290,7 @@ img {
       rgb(var(--cl-primary) / 40%),
       rgb(var(--cl-primary) / 40%)
     ),
-    url('../../images/hero/hero-bg.jpg');
+    url("../../images/hero/hero-bg.jpg");
   background-color: rgb(var(--cl-primary) / 40%);
   background-size: cover;
   background-position: center;
@@ -369,7 +360,7 @@ img {
 }
 
 .benefits-item:not(:last-child)::after {
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 62px);
   right: -44px;
@@ -395,8 +386,7 @@ img {
   padding-top: 120px;
   --items: 4;
 }
-.ingridients-list {
-}
+
 
 .ingridients-item {
   position: relative;
@@ -434,8 +424,7 @@ img {
   stroke: rgb(var(--cl-accent));
 }
 
-.ingridients-ill {
-}
+
 .ingridients-caption {
   margin-top: 36px;
   font-size: inherit;
@@ -471,8 +460,7 @@ img {
   font-size: 18px;
   line-height: 1.33;
 }
-.made-list {
-}
+
 .made-item {
   display: flex;
   gap: 8px;
@@ -481,7 +469,7 @@ img {
   margin-bottom: 24px;
 }
 .made-item::before {
-  content: '';
+  content: "";
   display: inline-block;
   flex-shrink: 0;
   margin-top: 5px;
@@ -524,7 +512,14 @@ img {
   text-align: center;
 }
 .products-btn {
-  
+  display: block;
+  margin: 0 auto;
+  min-width: 54px;
+  padding: 8px 20px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  background: rgb(var(--cl-white));
+
 }
 .products-btn:hover,
 .products-btn:focus {
@@ -586,8 +581,7 @@ img {
   background: rgb(var(--cl-white));
 }
 
-.bestsellers-img {
-}
+
 .bestsellers-caption {
   font-weight: 600;
   font-size: 18px;
@@ -603,6 +597,7 @@ img {
 }
 .reviews-list {
   --indent-col: 24px;
+  margin-bottom: 42px;
 }
 .reviews-item {
   position: relative;
@@ -627,6 +622,10 @@ img {
 .reviews-text {
   text-align: center;
   color: rgba(var(--cl-primary), 0.7);
+}
+.reviews-btn{
+  display: block;
+  margin: 0 auto;
 }
 /* #endregion */
 
@@ -716,7 +715,7 @@ img {
   max-width: 400px;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .modal-header {
@@ -730,7 +729,7 @@ img {
 }
 
 .close {
-  color: #FD9222;
+  color: #fd9222;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
@@ -768,7 +767,7 @@ textarea {
 }
 
 .btn-submit {
-  background-color: #FD9222;
+  background-color: #fd9222;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -794,8 +793,8 @@ textarea {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -846,7 +845,9 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"],
+input[type="email"],
+textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
