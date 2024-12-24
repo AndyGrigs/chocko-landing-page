@@ -52,6 +52,10 @@ body {
   /* <em | i | address> italic */
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* #region Base */
 /* Reset */
 h1,
@@ -239,6 +243,7 @@ img {
   z-index: 10;
   background-color: rgb(var(--cl-white));
   border-bottom: 1px solid rgb(var(--cl-icon) / 10%);
+  padding: 10px 20px;
 }
 
 .header-container {
@@ -250,12 +255,17 @@ img {
   margin-right: auto;
 }
 .header-nav {
+  display: none;
   margin-right: 90px;
 }
 .header-nav-list {
   display: flex;
   align-items: center;
   gap: 24px;
+}
+
+.header-socials{
+  display: none;
 }
 
 .header-nav-link {
