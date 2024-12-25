@@ -312,7 +312,7 @@ img {
 
 #menuToggle a {
   text-decoration: none;
-  color: #232323;
+  color: rgb(var(--cl-white) / 70%);
 
   transition: color 0.3s ease;
 }
@@ -341,8 +341,8 @@ img {
  */
 #menuToggle span {
   display: block;
-  width: 28px;
-  height: 4px;
+  width: 21px;
+  height: 2px;
   margin-bottom: 5px;
   position: relative;
 
@@ -372,7 +372,7 @@ img {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(1px, -1px);
-  background: rgb(var(--cl-primary));
+  background: rgb(var(--cl-white));
 }
 
 
@@ -382,7 +382,7 @@ img {
 }
 
 #menuToggle input:checked ~ span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(3px, 0);
+  transform: rotate(-45deg) translate(3px, -1px);
 }
 
 #menu {
@@ -392,7 +392,7 @@ img {
   height: 100%;
   padding: 50px;
   overflow-y: auto;
-  background: #ededed;
+  background: rgb(var(--cl-dark));
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -404,8 +404,7 @@ img {
 }
 
 #menu li a {
-  line-height: 16px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #menu li label {
