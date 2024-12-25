@@ -48,9 +48,10 @@
         <!-- https://codepen.io/erikterwan/pen/EVzeRP?editors=1100 -->
 
         <!-- Burger Menu Button -->
-        <div class="header-menu-toggle" id="munuToggle">
+        <div class="header-menu-toggle" id="menuToggle">
+          <input type="checkbox" id="menuCheckbox" />
           <span></span><span></span><span></span>
-          <ul class="menu">
+          <ul id="menu">
             <li><label for="menuCheckbox"><a>Links</a></label></li>
             <li><label for="menuCheckbox"><a>Links</a></label></li>
             <li><label for="menuCheckbox"><a>Links</a></label></li>
@@ -115,7 +116,7 @@
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero" id="hero">
+      <section class="hero hide" id="hero">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment
@@ -138,7 +139,7 @@
         </div>
       </section>
       <!-- Benefits -->
-      <section class="benefits" id="benefits">
+      <section class="benefits hide" id="benefits">
         <div class="container">
           <!-- For SEO and accessibility -->
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
@@ -176,7 +177,7 @@
       </section>
 
       <!-- Ingridients -->
-      <section class="ingridients section">
+      <section class="ingridients section hide">
         <div class="container">
           <h2 class="section-title">
             It all adds up to one exceptional
@@ -293,7 +294,7 @@
       </section>
 
       <!-- Made -->
-      <section class="made section" id="made">
+      <section class="made section hide" id="made">
         <div class="container">
           <h2 class="section-title">
             How it’s <span class="accent-text">made</span>?
@@ -341,7 +342,7 @@
       </section>
 
       <!-- Products -->
-      <section class="products section">
+      <section class="products section hide">
         <div class="container">
           <h2 class="section-title">
             Our <span class="accent-text">products</span>
@@ -447,7 +448,7 @@
         </div>
       </section>
       <!-- Bestsellers -->
-      <section class="bestsellers section">
+      <section class="bestsellers section hide">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-text">Top</span> sellers
@@ -517,7 +518,7 @@
         </div>
       </section>
       <!-- Reviews -->
-      <section class="reviews section" id="reviews">
+      <section class="reviews section hide" id="reviews">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-text">Chocolate</span> is loved
@@ -576,7 +577,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container">
         <div class="footer-top">
           <p class="footer-slogan">
