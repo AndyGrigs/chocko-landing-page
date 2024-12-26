@@ -199,10 +199,16 @@ img {
   align-items: center;
   gap: 4px;
 
-  font-size: 18px;
   font-weight: 700;
+  /* font-size: 18px; */
+  font-size: 14px;
   line-height: 1.11;
   letter-spacing: -0.03em;
+}
+
+.logo-icon{
+  width: 21px;
+  height: 21px;
 }
 /* #endregion */
 
@@ -292,6 +298,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .container{
+    max-width: 768px;
+    padding: 0 32px;
+  }
 }
 
 /* #endregion */
