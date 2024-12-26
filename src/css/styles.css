@@ -329,11 +329,8 @@ img {
   top: -7px;
   left: -5px;
   cursor: pointer;
-
   opacity: 0;
-  z-index: 2; /* and place it over the hamburger */
-
-  -webkit-touch-callout: none;
+  z-index: 2; 
 }
 
 /*
@@ -390,13 +387,12 @@ img {
   top: 0;
   right: 0;
   height: 100%;
-  padding: 50px;
+  padding: 136px 52px 20px 20px;
   overflow-y: auto;
   background: rgb(var(--cl-dark));
   list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
+  display: flex;
+  flex-direction: column;
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
 
@@ -409,13 +405,24 @@ img {
 
 #menu li label {
   cursor: pointer;
+  margin-bottom: 24px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul {
   transform: none;
+}
+
+.menu-socials{
+  display: flex;
+  margin-top: auto;
+  gap: 14px;
+  fill: rgb(var(--cl-white));
+}
+
+.menu-socials a {
+  border: 1px solid rgb(var(--cl-white) / 10%); /* add a 1px solid border around each icon */
+  border-radius: 30%; /* make the border rounded to match the icon shape */
+  padding: 8px; /* add some padding to create space between the icon and the border */
 }
 
 /* #endregion */
