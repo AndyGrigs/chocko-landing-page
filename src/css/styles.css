@@ -127,10 +127,28 @@ img {
 }
 
 .container {
-  /* width: 1168px; */
-  /* width: 320px; */
-  padding: 0 16px;
+  max-width: 375px;
+  min-width: 320px;
+  padding: 0 20px;
   margin: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .container {
+    max-width: 1168px;
+    padding: 0 16px;
+  }
+  
 }
 /* #endregion */
 
@@ -149,9 +167,10 @@ img {
 
 /* #region Buttons */
 .btn {
-  min-width: 144px;
-  min-height: 45px;
-  padding: 14px 40px;
+  min-width: 120px;
+  min-height: 41px;
+  /* padding: 14px 40px; */
+  padding: 12px 28px;
 
   font-size: 14px;
   font-weight: 600;
@@ -254,7 +273,7 @@ img {
   z-index: 10;
   background-color: rgb(var(--cl-white));
   border-bottom: 1px solid rgb(var(--cl-icon) / 10%);
-  padding: 10px 20px;
+  
 }
 
 .header-container {
@@ -264,6 +283,7 @@ img {
 
 .header-logo {
   margin-right: auto;
+  padding: 20px 0;
 }
 .header-nav {
   display: none;
@@ -298,10 +318,21 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .container{
-    max-width: 768px;
-    padding: 0 32px;
+  .header-nav {
+    display: block;
+    margin-right: 28px;
   }
+  .header-socials {
+    display: flex;
+  }
+  #menuToggle {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .header-nav{
+    margin-right: auto;}
 }
 
 /* #endregion */
@@ -309,14 +340,10 @@ img {
 /* #region Burger */
 #menuToggle {
   display: block;
-  /* You can also use relative/absolute here if you want to stay on the top */
   position: fixed;
-  top: 12px;
-  right: 12px;
-
+  top: 24px;
+  right: 24px;
   z-index: 1;
-
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -326,6 +353,7 @@ img {
 
   transition: color 0.3s ease;
 }
+
 
 #menuToggle a:hover {
   color: rgb(var(--cl-accent));
@@ -343,9 +371,6 @@ img {
   z-index: 2; 
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span {
   display: block;
   width: 21px;
@@ -372,10 +397,6 @@ img {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(1px, -1px);
@@ -396,6 +417,7 @@ img {
   position: fixed;
   top: 0;
   right: 0;
+  width: 220px;
   height: 100%;
   padding: 136px 52px 20px 20px;
   overflow-y: auto;
@@ -441,9 +463,18 @@ img {
 .hero {
   padding-bottom: 80px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1167px) {
+  .hero { 
+    padding-bottom: 40px;      
+  }
+  
+}
+
 .hero-container {
-  width: 1136px;
-  padding: 381px 40px 40px;
+  max-width: 1136px;
+  /* padding: 381px 40px 40px; */
+  padding: 395px 20px 20px;
   border-radius: 30px;
   background-image: linear-gradient(
       rgb(var(--cl-primary) / 40%),
@@ -458,6 +489,8 @@ img {
 
 .hero-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
   justify-content: space-between;
 }
 
@@ -467,9 +500,10 @@ img {
 }
 
 .hero-title {
-  width: 484px;
+  max-width: 484px;
   margin-bottom: 32px;
-  font-size: 28px;
+  /* font-size: 28px; */
+  font-size: 20px;
   font-weight: 500;
   line-height: 1.21;
   letter-spacing: -0.03em;
