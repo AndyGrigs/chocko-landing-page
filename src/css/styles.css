@@ -335,6 +335,7 @@ img {
 .header-container {
   display: flex;
   align-items: center;
+  padding: 0 20px;
 }
 
 .header-logo {
@@ -397,9 +398,6 @@ img {
 /* #region Burger */
 #menuToggle {
   display: block;
-  position: fixed;
-  top: 24px;
-  right: 24px;
   z-index: 1;
   user-select: none;
 }
@@ -596,9 +594,6 @@ img {
   height: 38px;
 }
 
-.hero-title {
-  font-size: 28px;
-}
 
 .hero-link-icon svg {
   width: 57%;
