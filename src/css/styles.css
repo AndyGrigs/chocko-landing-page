@@ -95,7 +95,7 @@ img {
   height: auto;
 }
 
-picture{
+picture {
   display: block;
 }
 
@@ -863,15 +863,14 @@ picture{
 }
 
 .play-icon {
-  position: absolute; 
-  top: 50%; 
-  left: 50%;   transform: translate(-50%, -50%);
-  cursor: pointer; 
-   z-index: 10; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
   fill: rgb(var(--cl-white));
 }
-
-
 
 .made-right-side {
   padding: 20px;
@@ -879,14 +878,13 @@ picture{
   border-radius: 15px;
 }
 
-
 @media only screen and (min-width: 768px) {
   .made-right-side {
     padding: 32px;
   }
 }
 
-.made-left-side img{
+.made-left-side img {
   width: 100%;
 }
 
@@ -930,7 +928,7 @@ picture{
     --items: 2;
   }
 }
-  
+
 @media screen and (min-width: 1167px) {
   .products-list {
     --items: 4;
@@ -978,8 +976,36 @@ picture{
 /* #region Bestsellers */
 
 .bestsellers-list {
+  --items: 1;
   --indent-col: 16px;
 }
+
+.bestsellers-item:nth-last-child(-n + 2) {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .bestsellers-list {
+    --items: 2;
+  }
+
+  .bestsellers-item:nth-last-child(-n + 2) {
+    display: block;
+  }
+
+  .bestsellers-item:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1167px) {
+  .bestsellers-list {
+    --items: 3;
+  }
+  .bestsellers-item:nth-child(3) {
+    display: block;
+  }
+}
+
 .bestsellers-item {
   background: rgb(var(--cl-white));
 }
@@ -1041,15 +1067,41 @@ picture{
   padding-bottom: 120px;
 }
 .reviews-list {
+  --items: 1;
   --indent-col: 24px;
   margin-bottom: 42px;
 }
 .reviews-item {
+  margin-top: 32px;
   position: relative;
   padding: 24px;
   background: rgb(var(--cl-white));
   box-shadow: 0px 9.05px 100px 0px rgba(17, 17, 17, 0.03);
 }
+
+.reviews-item:nth-last-child(-n + 2) {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .reviews-list {
+    --items: 2;
+  }
+
+  .reviews-item:nth-child(2) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1167px) {
+  .reviews-list {
+    --items: 3;
+  }
+  .reviews-item:nth-child(3) {
+    display: block;
+  }
+}
+
 .reviews-avatar {
   position: absolute;
   top: -15%;
