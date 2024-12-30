@@ -920,10 +920,23 @@ picture{
 /* #region Products */
 
 .products-list {
-  --items: 4;
+  /* --items: 4; */
+  --items: 1;
   --indent-col: 18px;
   --indent-row: 24px;
 }
+@media screen and (min-width: 768px) {
+  .products-list {
+    --items: 2;
+  }
+}
+  
+@media screen and (min-width: 1167px) {
+  .products-list {
+    --items: 4;
+  }
+}
+
 .products-item {
   background: rgb(var(--cl-light));
 }
