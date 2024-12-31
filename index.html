@@ -36,7 +36,7 @@
 
   <body>
     <!-- Header -->
-    <header class="header hide">
+    <header class="header">
       <div class="header-container">
         <a class="header-logo logo" href="#">
           <i class="logo-accent">SIMPLY</i> CHOCOLATE
@@ -44,7 +44,7 @@
             <use href="./images/icons/icons.svg#logo"></use>
           </svg>
         </a>
-        
+
         <!-- https://codepen.io/erikterwan/pen/EVzeRP?editors=1100 -->
 
         <!-- Burger Menu Button -->
@@ -52,10 +52,16 @@
           <input type="checkbox" id="menuCheckbox" />
           <span></span><span></span><span></span>
           <ul id="menu">
-            <li><label for="menuCheckbox"><a>Home</a></label></li>
-            <li><label for="menuCheckbox"><a>How it’s made?</a></label></li>
-            <li><label for="menuCheckbox"><a>Chocolate is loved</a></label></li>
-            <li class=" menu-socials">
+            <li>
+              <label for="menuCheckbox"><a>Home</a></label>
+            </li>
+            <li>
+              <label for="menuCheckbox"><a>How it’s made?</a></label>
+            </li>
+            <li>
+              <label for="menuCheckbox"><a>Chocolate is loved</a></label>
+            </li>
+            <li class="menu-socials">
               <a
                 class="socials-link"
                 href="https://facebook.com"
@@ -89,14 +95,12 @@
               </a>
             </li>
           </ul>
-
-          
         </div>
 
         <!-- Desktop -->
         <nav class="header-nav">
           <ul class="header-nav-list">
-            <li class="header-nav-item ">
+            <li class="header-nav-item">
               <a class="header-nav-link active" href="#home">Home</a>
             </li>
             <li class="header-nav-item">
@@ -151,7 +155,7 @@
     </header>
     <main>
       <!-- Hero -->
-      <section class="hero hide" id="hero">
+      <section class="hero" id="hero">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment
@@ -176,7 +180,7 @@
         </div>
       </section>
       <!-- Benefits -->
-      <section class="benefits hide" id="benefits">
+      <section class="benefits" id="benefits">
         <div class="container">
           <!-- For SEO and accessibility -->
           <h2 class="visually-hidden">Benefits of Simply Chocolate</h2>
@@ -229,7 +233,7 @@
       </section>
 
       <!-- Ingridients -->
-      <section class="ingridients section hide">
+      <section class="ingridients section">
         <div class="container">
           <h2 class="section-title">
             It all adds up to one exceptional
@@ -346,7 +350,7 @@
       </section>
 
       <!-- Made -->
-      <section class="made section hide" id="made">
+      <section class="made section" id="made">
         <div class="container">
           <h2 class="section-title">
             How it’s <span class="accent-text">made</span>?
@@ -356,15 +360,24 @@
               <picture class="made-pic">
                 <source
                   media="(min-width: 1168px)"
-                  srcset="./images/made/image_desk.jpeg 1x, ./images/made/image_desk@2x.jpeg 2x"
+                  srcset="
+                    ./images/made/image_desk.jpeg    1x,
+                    ./images/made/image_desk@2x.jpeg 2x
+                  "
                 />
                 <source
                   media="(min-width: 768px)"
-                  srcset="./images/made/image_tab.jpeg 1x, ./images/made/image_tab@2x.jpeg 2x"
+                  srcset="
+                    ./images/made/image_tab.jpeg    1x,
+                    ./images/made/image_tab@2x.jpeg 2x
+                  "
                 />
                 <img
                   src="./images/made/image.jpg"
-                  srcset=" ./images/made/image_mob.jpeg 1x, ./images/made/image_mob@2x.jpeg 2x"
+                  srcset="
+                    ./images/made/image_mob.jpeg    1x,
+                    ./images/made/image_mob@2x.jpeg 2x
+                  "
                   alt="chocolate"
                 />
               </picture>
@@ -405,7 +418,7 @@
       </section>
 
       <!-- Products -->
-      <section class="products section hide">
+      <section class="products section">
         <div class="container">
           <h2 class="section-title">
             Our <span class="accent-text">products</span>
@@ -511,7 +524,7 @@
         </div>
       </section>
       <!-- Bestsellers -->
-      <section class="bestsellers section hide">
+      <section class="bestsellers section">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-text">Top</span> sellers
@@ -581,7 +594,7 @@
         </div>
       </section>
       <!-- Reviews -->
-      <section class="reviews section hide" id="reviews">
+      <section class="reviews section" id="reviews">
         <div class="container">
           <h2 class="section-title">
             <span class="accent-text">Chocolate</span> is loved
@@ -632,7 +645,7 @@
               </p>
             </li>
           </ul>
-          <button class="btn btn-secondary reviews-btn" type="button">
+          <button id="reviews-btn" class="btn btn-secondary reviews-btn" type="button">
             Leave a review
           </button>
         </div>
@@ -722,6 +735,16 @@
               <a class="footer-nav-link" href="#reviews">Chocolate is loved</a>
             </li>
           </ul>
+          <div class="footer-suscribe">
+            <input
+              placeholder="Enter your email"
+              type="text"
+              class="footer-subscribe-input"
+            />
+            <button class="footer-subscribe-btn btn btn-primary">
+              Subscribe
+            </button>
+          </div>
         </div>
       </div>
     </footer>
@@ -730,103 +753,85 @@
     <div id="comment-modal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <span class="close" id="close-modal">&times;</span>
-          <h2>
-            Leave a Review About
-            <span style="color: #fd9222">Our Chocolate</span>
+          <span class="modal-close" id="close-modal">&times;</span>
+          <h2 class="section-title modal-title">
+            Leave a Review <br />
+            About <span class="accent-text">Our Chocolate</span>
           </h2>
         </div>
         <div class="modal-body">
-          <form id="comment-form">
+          <form id="comment-form" class="modal-form">
             <!-- Name Field -->
+
             <div class="form-group">
               <label for="name">Name</label>
-              <div style="position: relative">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  placeholder="Enter your name"
-                  required
-                />
-                <span>
-                  <i class="fa fa-user"></i>
-                </span>
+              <div class="form-input">
+                <input type="text" id="name" name="name" required />
+                <svg class="modal-form-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#user"></use>
+                </svg>
               </div>
             </div>
 
             <!-- Email Field -->
             <div class="form-group">
               <label for="email">Email</label>
-              <div style="position: relative">
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  required
-                />
-                <span>
-                  <i class="fa fa-envelope"></i>
-                </span>
+              <div class="form-input">
+                <input type="email" id="email" name="email" required />
+                <svg class="modal-form-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#email"></use>
+                </svg>
               </div>
             </div>
 
             <!-- Phone Number Field -->
             <div class="form-group">
               <label for="phone">Phone number</label>
-              <div style="position: relative">
-                <input
-                  type="text"
-                  id="phone"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                />
-                <span
-                  style="
-                    position: absolute;
-                    top: 50%;
-                    left: 10px;
-                    transform: translateY(-50%);
-                    color: #fd9222;
-                  "
-                >
-                  <i class="fa fa-phone"></i>
-                </span>
+              <div class="form-input">
+                <input type="text" id="phone" name="phone" />
+                <svg class="modal-form-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#phone"></use>
+                </svg>
               </div>
             </div>
 
             <!-- Comment Textarea -->
             <div class="form-group">
               <label for="comment">Comment</label>
-              <textarea
-                id="comment"
-                name="comment"
-                placeholder="Enter text"
-                rows="5"
-                required
-              ></textarea>
+              <div class="form-input">
+                <textarea
+                  id="comment"
+                  name="comment"
+                  placeholder="Enter text"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
             </div>
 
             <!-- Privacy Policy Checkbox -->
-            <div class="form-group">
-              <label>
-                <input
-                  type="checkbox"
-                  id="privacy-policy"
-                  name="privacy-policy"
-                  required
-                />
+            <div class="modal-field modal-checkbox-container">
+              <input
+                id="user-privacy"
+                name="user-privacy"
+                type="checkbox"
+                value="true"
+                class="visually-hidden"
+              />
+              <label class="modal-checkbox-label" for="user-privacy">
+                <span class="modal-checkbox">
+                  <svg class="modal-checkbox-icon" width="10" height="8">
+                    <use href="./images/icons/icons.svg#checkmark"></use>
+                  </svg>
+                </span>
                 I accept the terms and conditions of the
-                <a href="#" target="_blank" style="color: #fd9222"
-                  >Privacy Policy</a
-                >
+                <a href="#" class="modal-privacy-link">Privacy Policy</a>
               </label>
             </div>
 
             <!-- Submit Button -->
             <div class="form-group">
-              <button type="submit" class="btn btn-submit">Send</button>
+              <button type="submit" class="btn btn-primary modal-btn">Send</button>
             </div>
           </form>
         </div>
