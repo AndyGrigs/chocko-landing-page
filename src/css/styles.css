@@ -256,7 +256,6 @@ picture {
 .btn-primary:hover,
 .btn-primary:focus {
   border-color: rgb(var(--cl-accent));
-  color: rgb(var(--cl-accent));
 }
 .btn-secondary {
   font-size: 18px;
@@ -486,9 +485,21 @@ picture {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li a {
+
+
+#menu li{
+  font-size: 12px;
+  margin-bottom: 2em;
+}
+#menu li a{
   font-size: 12px;
 }
+
+#menu li{
+  font-size: 12px;
+  margin-bottom: 2em;
+}
+
 
 #menu li label {
   cursor: pointer;
